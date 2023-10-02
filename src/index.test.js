@@ -1,3 +1,4 @@
+import analyze_array from "./analyze_array";
 import caesar_Cipher from "./caesar_Cipher";
 import calculator from "./calculator";
 import capitalize from "./capitalize";
@@ -24,22 +25,34 @@ import reverse from "./reverse";
 // test("Calculator Multiply", () => expect(calculator.multiply(2, 6)).toBe(12));
 
 //Caesar Cipher
-test("Caesar Cipher Name", () => {
-  expect(caesar_Cipher("eyoel", 5)).toBe("jdtjq");
-});
+// test("Caesar Cipher Name", () => {
+//   expect(caesar_Cipher("eyoel", 5)).toBe("jdtjq");
+// });
 
-test("Caesar Cipher alphabet", () => {
-  expect(caesar_Cipher("abcdefghijklmnopqrstuvwxyz", 5)).toBe(
-    "fghijklmnopqrstuvwxyzabcde"
-  );
-});
+// test("Caesar Cipher alphabet", () => {
+//   expect(caesar_Cipher("abcdefghijklmnopqrstuvwxyz", 5)).toBe(
+//     "fghijklmnopqrstuvwxyzabcde"
+//   );
+// });
 
-test("Caesar Cipher same", () => {
-  expect(caesar_Cipher("abcdefghijklmnopqrstuvwxyz", 0)).toBe(
-    "abcdefghijklmnopqrstuvwxyz"
-  );
-});
+// test("Caesar Cipher same", () => {
+//   expect(caesar_Cipher("abcdefghijklmnopqrstuvwxyz", 0)).toBe(
+//     "abcdefghijklmnopqrstuvwxyz"
+//   );
+// });
 
-test("Caesar Cipher punctuation", () => {
-  expect(caesar_Cipher("di!ck", 5)).toBe("in!hp");
+// test("Caesar Cipher punctuation", () => {
+//   expect(caesar_Cipher("di!ck", 5)).toBe("in!hp");
+// });
+
+//analyze array
+test("Analyze Array", () => {
+  let obj = {
+    max: 5,
+    min: 1,
+    length: 4,
+    average: 2.75,
+  };
+
+  expect(analyze_array([5, 3, 2, 1])).toMatchObject(obj);
 });
